@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Линто (lyntho) — Википедия</title>
+    <style>
+        :root {
+            --background-color: #1e1e1e;
+            --text-color: #d4d4d4;
+            --accent-color: #4caf50;
+            --container-bg-color: #252526;
+            --border-color: #3c3c3c;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            padding: 20px;
+            margin: 0;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: var(--container-bg-color);
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: background-color 0.5s;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url('https://0x0.st/s/CXCySwRUUqv9Uv3U1Yc3jg/XNka.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        h1, h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        p, h1, h2 {
+            position: relative;
+            overflow: hidden;
+        }
+        p::after, h1::after, h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, var(--background-color) 50%, var(--text-color) 50%);
+            background-repeat: no-repeat;
+            background-size: 200% 100%;
+            background-position: 100%;
+            animation: revealText 1s forwards;
+            animation-delay: calc(var(--char-index) * 0.05s);
+        }
+        @keyframes revealText {
+            from {
+                background-position: 100%;
+            }
+            to {
+                background-position: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="avatar"></div>
+        <h1>Линто (lyntho)</h1>
+        <h2>Разработчик программного обеспечения</h2>
+        <p>Я — Линто, профессионально известный как <em>lyntho</em>, специалист в области программирования на C#, C и C++. Мои разработки и вклад в открытые исходные коды оказали значительное влияние на индустрию программного обеспечения.</p>
+        <p>Я автор множества популярных библиотек и фреймворков, которые нашли широкое применение в различных проектах. Моя работа направлена на улучшение производительности и безопасности программных продуктов.</p>
+        <p>Вне работы я постоянно стремлюсь к самосовершенствованию, изучаю новейшие технологии, участвую в хакатонах.</p>
+    </div>
+</body>
+</html>
